@@ -1,6 +1,5 @@
-/* ==========================================================================
-   IMRAN MAHMOUD — PORTFOLIO DATA CONFIGURATION
-   ========================================================================== */
+/* 
+   IMRAN MAHMOUD — PORTFOLIO DATA CONFIGURATION */
 
 const PORTFOLIO_DATA = {
   profile: {

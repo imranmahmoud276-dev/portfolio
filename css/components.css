@@ -1,10 +1,6 @@
-/* ==========================================================================
-   COMPONENT STYLES (HEADER, HERO, PROJECTS, SKILLS, MODALS, CARDS)
-   ========================================================================== */
+/* COMPONENT STYLES (HEADER, HERO, PROJECTS, SKILLS, MODALS, CARDS)*/
 
-/* --------------------------------------------------------------------------
-   Header & Navbar
-   -------------------------------------------------------------------------- */
+/* Header & Navbar */
 .navbar-header {
   position: fixed;
   top: 0;
@@ -184,9 +180,7 @@
   border-color: var(--text-primary);
 }
 
-/* --------------------------------------------------------------------------
-   Buttons
-   -------------------------------------------------------------------------- */
+/*  Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -226,9 +220,7 @@
   transform: translateY(-3px);
 }
 
-/* --------------------------------------------------------------------------
-   Hero Section
-   -------------------------------------------------------------------------- */
+/* Hero Section */
 .hero-section {
   padding-top: calc(var(--header-height) + 4rem);
   padding-bottom: 6rem;
@@ -354,9 +346,7 @@
   gap: 0.5rem;
 }
 
-/* --------------------------------------------------------------------------
-   Skills & Tech Stack Grid
-   -------------------------------------------------------------------------- */
+/* Skills & Tech Stack Grid */
 .skills-section {
   padding: 6rem 0;
   background: var(--bg-secondary);
@@ -449,9 +439,7 @@
   transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   Projects Showcase Section
-   -------------------------------------------------------------------------- */
+/*  Projects Showcase Section */
 .projects-section {
   padding: 6rem 0;
 }
@@ -609,9 +597,7 @@
   color: var(--accent-primary);
 }
 
-/* --------------------------------------------------------------------------
-   Experience Timeline
-   -------------------------------------------------------------------------- */
+/* Experience Timeline */
 .timeline-section {
   padding: 6rem 0;
   background: var(--bg-secondary);
@@ -677,9 +663,7 @@
   margin-bottom: 1rem;
 }
 
-/* --------------------------------------------------------------------------
-   Contact & Toast Notifications
-   -------------------------------------------------------------------------- */
+/* Contact & Toast Notifications */
 .contact-section {
   padding: 6rem 0;
 }
@@ -787,9 +771,9 @@
   transform: translateX(0);
 }
 
-/* --------------------------------------------------------------------------
+/* 
    Project Detail Modal
-   -------------------------------------------------------------------------- */
+   */
 .modal-backdrop {
   position: fixed;
   top: 0;

@@ -1,10 +1,6 @@
-/* ==========================================================================
-   EXHAUSTIVE RESPONSIVE BREAKPOINTS & MEDIA QUERIES
-   ========================================================================== */
+/*EXHAUSTIVE RESPONSIVE BREAKPOINTS & MEDIA QUERIES*/
 
-/* --------------------------------------------------------------------------
-   Mobile Navigation Toggle Button & Drawer Default
-   -------------------------------------------------------------------------- */
+/*Mobile Navigation Toggle Button & Drawer Default*/
 .mobile-menu-btn {
   display: none;
   background: var(--bg-tertiary);
@@ -25,9 +21,7 @@
   color: var(--accent-primary);
 }
 
-/* --------------------------------------------------------------------------
-   Laptop & Small Desktop (992px to 1200px)
-   -------------------------------------------------------------------------- */
+/* Laptop & Small Desktop (992px to 1200px)*/
 @media (max-width: 1200px) {
   .container {
     max-width: 100%;
@@ -39,17 +33,17 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Tablet & Medium Screens (769px to 991px)
-   -------------------------------------------------------------------------- */
+/* Tablet & Medium Screens (769px to 991px)*/
 @media (max-width: 991px) {
   .hero-grid {
+    margin-top: 30px;
     grid-template-columns: 1fr;
     gap: 3.5rem;
     text-align: center;
   }
 
   .hero-tag {
+    
     margin: 0 auto 1.5rem auto;
   }
 
@@ -90,9 +84,7 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Mobile Landscape & Large Phones (576px to 768px)
-   -------------------------------------------------------------------------- */
+/* Mobile Landscape & Large Phones (576px to 768px) */
 @media (max-width: 768px) {
   .container {
     padding: 0 1.25rem;
@@ -214,9 +206,7 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Small Mobile Devices & Portrait Phones (320px to 575px)
-   -------------------------------------------------------------------------- */
+/* Small Mobile Devices & Portrait Phones (320px to 575px) */
 @media (max-width: 575px) {
   .brand-logo {
     font-size: 1.1rem;
