@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="amber">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imran Mahmoud — Software Engineering Student & Portfolio</title>
+  <meta name="description" content="Imran Mahmoud is a 20-year-old 2nd-year Software Engineering student at Hilcoe College in Addis Ababa, specializing in Frontend Development and AI Automation." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Ambient Animated Background Mesh -->
+  <div class="bg-ambient">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- Sticky Navbar Header -->
+  <header class="navbar-header">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+    <div class="container navbar-container">
+      <a href="#hero" class="brand-logo">
+        <span class="brand-badge">IM</span>
+        <span>Imran<span style="color: var(--accent-primary);">.</span>Mahmoud</span>
+      </a>
+
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span>Available for Work & Projects</span>
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Mode Toggle -->
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Theme">☀️</button>
+
+        <!-- Accent Color Picker Dropdown -->
+        <div class="accent-dropdown">
+          <button id="accent-toggle-btn" class="accent-picker-toggle" aria-label="Choose Accent Color" title="Customize Accent Color">🎨</button>
+          <div class="accent-menu" id="accent-menu">
+            <span class="accent-dot" data-accent-color="amber" style="background: #f59e0b;" title="Amber/Gold"></span>
+            <span class="accent-dot" data-accent-color="violet" style="background: #8b5cf6;" title="Violet"></span>
+            <span class="accent-dot" data-accent-color="emerald" style="background: #10b981;" title="Emerald"></span>
+            <span class="accent-dot" data-accent-color="rose" style="background: #f43f5e;" title="Rose"></span>
+            <span class="accent-dot" data-accent-color="cyan" style="background: #06b6d4;" title="Cyan"></span>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-tag">
+            <span>🎓 Software Engineering — Hilcoe College (Year 2)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Imran Mahmoud <br />
+            <span class="typing-container" id="typing-text">Frontend Developer</span>
+          </h1>
+
+          <p class="hero-bio">
+            20-year-old software engineering student and AI automation builder in Addis Ababa, Ethiopia. Specializing in frontend web interfaces, responsive platforms, and intelligent n8n automation pipelines.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work (6 Projects)</span> &rarr;
+            </a>
+            <a href="mailto:imranmahmoud276@gmail.com" class="btn btn-outline">
+              <span>Email Me</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h3>Year 2</h3>
+              <p>Hilcoe College</p>
+            </div>
+            <div class="stat-item">
+              <h3>6</h3>
+              <p>Uploaded Projects</p>
+            </div>
+            <div class="stat-item">
+              <h3>20</h3>
+              <p>Years Old</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-avatar-card">
+          <div class="avatar-wrapper">
+            <img src="image.png" alt="Imran Mahmoud Profile" class="avatar-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Imran+Mahmoud&background=f59e0b&color=fff&size=200';" />
+          </div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.25rem; font-family: 'Fraunces', serif;">Imran Mahmoud</h3>
+          <p style="color: var(--accent-primary); font-family: var(--font-code); font-size: 0.88rem; margin-bottom: 0.75rem;">Frontend Dev & AI Automation</p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">📍 Addis Ababa, Ethiopia</p>
+          
+          <div class="floating-badge">
+            <span>✨ 6 Uploaded Projects</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 5rem 0;">
+      <div class="container">
+        <div class="section-subtitle">About</div>
+        <h2 class="section-title">A Builder Who Learns By Shipping</h2>
+        <div class="about-grid" style="display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 3rem;">
+          <div>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+              I am a 2nd-year Software Engineering student at <strong>Hilcoe College</strong> in Addis Ababa. My coursework spans Java OOP, C++, web development, and discrete mathematics — but most of what I know comes from real project work: responsive web platforms, bookstore e-commerce applications, and end-to-end <strong>n8n AI automation pipelines</strong>.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+              I focus heavily on clean HTML5 structure, modern CSS3 styling, responsive layouts, and intelligent workflow automation to deliver fast, beautiful, and accessible web experiences.
+            </p>
+          </div>
+          <div class="info-card" style="background: var(--glass-bg); border: var(--glass-border); border-radius: var(--radius-md); padding: 1.75rem;">
+            <div class="info-row" style="display:flex; justify-content:space-between; padding:0.75rem 0; border-bottom:1px solid var(--border-color);"><span style="color:var(--text-muted);">Institution</span><strong style="color:var(--text-primary);">Hilcoe College</strong></div>
+            <div class="info-row" style="display:flex; justify-content:space-between; padding:0.75rem 0; border-bottom:1px solid var(--border-color);"><span style="color:var(--text-muted);">Track</span><strong style="color:var(--text-primary);">Software Eng., Year 2</strong></div>
+            <div class="info-row" style="display:flex; justify-content:space-between; padding:0.75rem 0; border-bottom:1px solid var(--border-color);"><span style="color:var(--text-muted);">Focus</span><strong style="color:var(--accent-primary);">Frontend + Automation</strong></div>
+            <div class="info-row" style="display:flex; justify-content:space-between; padding:0.75rem 0; border-bottom:1px solid var(--border-color);"><span style="color:var(--text-muted);">Program</span><strong style="color:var(--text-primary);">InVision Africa</strong></div>
+            <div class="info-row" style="display:flex; justify-content:space-between; padding:0.75rem 0;"><span style="color:var(--text-muted);">Based</span><strong style="color:var(--text-primary);">Addis Ababa, Ethiopia</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-subtitle">Skills</div>
+        <h2 class="section-title">Toolkit</h2>
+        
+        <div class="skill-category-tabs">
+          <button class="tab-btn skill-tab-btn active" data-skill-cat="all">All Skills</button>
+          <button class="tab-btn skill-tab-btn" data-skill-cat="frontend">Frontend</button>
+          <button class="tab-btn skill-tab-btn" data-skill-cat="languages">Languages (C++, Py, Java)</button>
+          <button class="tab-btn skill-tab-btn" data-skill-cat="automation">AI & Automation</button>
+          <button class="tab-btn skill-tab-btn" data-skill-cat="tools">Git & Tools</button>
+        </div>
+
+        <!-- Pre-rendered Static Skills Grid for 100% Instant Visibility -->
+        <div class="skills-grid" id="skills-grid">
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🌐</div><strong style="font-size: 1rem;">HTML & HTML5</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🎨</div><strong style="font-size: 1rem;">CSS3 & Modern Layouts</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">📜</div><strong style="font-size: 1rem;">JavaScript (ES6+)</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🅱️</div><strong style="font-size: 1rem;">Bootstrap 5</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🐍</div><strong style="font-size: 1rem;">Python</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">⚡</div><strong style="font-size: 1rem;">C++</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">☕</div><strong style="font-size: 1rem;">Java</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🤖</div><strong style="font-size: 1rem;">AI Automation (n8n)</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div></div>
+          <div class="skill-card"><div class="skill-header"><div class="skill-title-wrapper"><div class="skill-icon">🔀</div><strong style="font-size: 1rem;">Git & Version Control</strong></div><span style="font-family: var(--font-code); color: var(--accent-primary); font-weight: 700;">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-subtitle">Selected Work</div>
+        <h2 class="section-title">Uploaded Projects</h2>
+
+        <div class="portfolio-controls">
+          <div class="skill-category-tabs" style="margin-bottom: 0;">
+            <button class="tab-btn filter-btn active" data-filter="all">All Uploaded Projects</button>
+            <button class="tab-btn filter-btn" data-filter="automation">AI Automation</button>
+            <button class="tab-btn filter-btn" data-filter="frontend">Frontend & Web Portals</button>
+          </div>
+
+          <div class="search-input-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="project-search-input" class="search-input" placeholder="Search projects..." />
+          </div>
+        </div>
+
+        <!-- Pre-rendered Static Projects Grid for 100% Instant Visibility -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- 1. AI Automation -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'><rect width='100%' height='100%' fill='%230f172a'/><path d='M100 200 Q250 100 400 200 T600 200' stroke='%23f59e0b' stroke-width='4' fill='none'/><circle cx='250' cy='150' r='50' fill='%238b5cf6' opacity='0.4'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='22' font-weight='bold'>🤖 n8n AI Automation</text><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' fill='%23f59e0b' font-family='sans-serif' font-size='15'>Research-to-Report Workflow Pipeline</text></svg>" alt="AI Automation" class="project-img" />
+              <span class="project-category-badge">AUTOMATION</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">AI Research-to-Report Automation Pipeline</h3>
+              <p class="project-desc">A two-workflow n8n automation pipeline turning any research topic into a finished report: Tavily handles web research, LLM drafts HTML report, PDFMonkey converts to PDF, with Google Drive, Sheets, and Gmail human approval cycles.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">n8n</span><span class="tech-tag">AI Automation</span><span class="tech-tag">Tavily API</span><span class="tech-tag">PDFMonkey</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://www.loom.com/share/a794151e38f949e5a51cdddb96b11345" target="_blank" rel="noopener" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🎬 Watch Demo on Loom</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Apple Website Clone -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="Apple Website/images/home/iphone.jpg" alt="Apple Website Clone" class="project-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'100%\' height=\'100%\' fill=\'%23000000\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23ffffff\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'> Apple Website Clone</text></svg>';" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Apple.com Homepage Clone</h3>
+              <p class="project-desc">Pixel-focused Apple.com homepage clone built with clean HTML5 & CSS3. Features CSS checkbox hacks for mobile drawer navigation and smooth scroll-snap carousels.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Responsive Layout</span><span class="tech-tag">No JS</span>
+              </div>
+              <div class="project-actions">
+                <a href="Apple Website/APPLE.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Addis Books Store -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="Book Store Website/the girl.png" alt="Addis Books Store" class="project-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'100%\' height=\'100%\' fill=\'%23111827\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23f59e0b\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'>📚 Addis Books Store</text></svg>';" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Addis Books — Bookstore Website</h3>
+              <p class="project-desc">E-Commerce bookstore application for Ethiopian literature and authors. Includes book showcases, author profiles, category filtering, and custom CSS styling.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">E-Commerce UI</span><span class="tech-tag">Ethiopian Books</span>
+              </div>
+              <div class="project-actions">
+                <a href="Book Store Website/Addis.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. EthioConnect Bootstrap Platform -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'><rect width='100%' height='100%' fill='%231e1b4b'/><rect x='40' y='40' width='520' height='270' rx='12' fill='%23312e81' stroke='%236366f1' stroke-width='2'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' fill='%23818cf8' font-family='sans-serif' font-size='24' font-weight='bold'>🅱️ Bootstrap 5 EthioConnect</text><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' fill='%23c7d2fe' font-family='sans-serif' font-size='15'>Responsive Web Platform Layout</text></svg>" alt="EthioConnect Bootstrap" class="project-img" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">EthioConnect — Responsive Bootstrap Platform</h3>
+              <p class="project-desc">Comprehensive Bootstrap 5 web platform covering modern grid layouts, custom navigation components, cards, and responsive behaviors across 8 sections.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Bootstrap 5</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Responsive UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="Bootstrap/ethioconnect.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Edu Web University Portal -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="Edu web/univ.jpg" alt="Edu Web Portal" class="project-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'100%\' height=\'100%' fill='%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill='%2338bdf8\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'>🎓 Edu Web Portal</text></svg>';" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Edu Web — University & Education Portal</h3>
+              <p class="project-desc">Interactive educational portal featuring background video integration (uni.mp4 & y.mp4), course listings, campus news, and modern CSS layout.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Video Integration</span><span class="tech-tag">Education UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="Edu web/project 3.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Business License Registration Portal -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="businesslicense/images/AATB.jfif" alt="Business License Portal" class="project-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'100%\' height=\'100%\' fill='%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill='%23f59e0b\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'>🏢 Business License Portal</text></svg>';" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Business License Registration Portal</h3>
+              <p class="project-desc">Web portal for business license application and permit processing with structured forms, status tracking UI, and custom CSS styling.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Form Processing</span><span class="tech-tag">Web Portal</span>
+              </div>
+              <div class="project-actions">
+                <a href="businesslicense/licence.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Puppy Lovers Community Site -->
+          <div class="project-card">
+            <div class="project-img-box">
+              <img src="puupy/Puupy-lovers/puppy-lovers-page-design.jpg" alt="Puppy Lovers Community Site" class="project-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'100%\' height=\'100%\' fill='%23064e3b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill='%2310b981\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\'>🐶 Puppy Lovers Community</text></svg>';" />
+              <span class="project-category-badge">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Puppy Lovers Community Landing Page</h3>
+              <p class="project-desc">Community landing web page for pet lovers built with custom HTML & CSS styling.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Community Landing</span>
+              </div>
+              <div class="project-actions">
+                <a href="puupy/project5.html" target="_blank" class="project-link-btn" style="color: var(--accent-primary); font-weight: 700;">🚀 Open Project</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="timeline-section">
+      <div class="container">
+        <div class="section-subtitle">Education</div>
+        <h2 class="section-title">Experience & Academic Path</h2>
+        <div class="timeline" id="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3 class="timeline-role">2nd Year Software Engineering Student</h3>
+              <div class="timeline-company">Hilcoe College</div>
+              <div class="timeline-date">2024 — Present</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">Studying core computer science & software engineering: Java OOP, Data Structures, Web Development, Discrete Mathematics, and C++ System Programming.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Frontend & AI Automation Fellow</h3>
+              <div class="timeline-company">InVision Africa Program</div>
+              <div class="timeline-date">2024 — Present</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">Built production-grade n8n AI automation pipelines (research-to-report workflows) and developed responsive web projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-subtitle">Contact</div>
+        <h2 class="section-title">Let's Build Something</h2>
+
+        <div class="contact-grid">
+          <div class="contact-card-info">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Contact Information</h3>
+
+            <div class="contact-method-item" onclick="copyToClipboard('imranmahmoud276@gmail.com', 'Email')" style="cursor: pointer;">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: var(--text-muted);">EMAIL</strong>
+                <span style="font-weight: 600;">imranmahmoud276@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact-method-item" onclick="copyToClipboard('0970688545', 'Phone')" style="cursor: pointer;">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: var(--text-muted);">PHONE</strong>
+                <span style="font-weight: 600;">0970688545</span>
+              </div>
+            </div>
+
+            <div class="contact-method-item" onclick="window.open('https://t.me/imrruu', '_blank')" style="cursor: pointer;">
+              <div class="contact-icon">✈️</div>
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: var(--text-muted);">TELEGRAM</strong>
+                <span style="font-weight: 600;">@imrruu</span>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: var(--text-muted);">LOCATION</strong>
+                <span style="font-weight: 600;">Addis Ababa, Ethiopia</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+              <h4 style="margin-bottom: 1rem; font-size: 1rem;">Social & GitHub Profiles</h4>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="https://github.com/imranmahmoud276-dev" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+                <a href="https://www.linkedin.com/in/imran-mahmoud/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+                <a href="https://t.me/imrruu" target="_blank" rel="noopener" class="btn btn-outline">Telegram</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Send a Message</h3>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="Your Email" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Your Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span> &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 3rem 0; background: var(--bg-secondary); border-top: var(--glass-border); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+    <div class="container">
+      <p>© 2026 Imran Mahmoud — Software Engineering, Hilcoe College.</p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal Popup -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

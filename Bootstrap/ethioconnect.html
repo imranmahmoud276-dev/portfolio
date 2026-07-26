@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>EthioConnect — Ethiopian Tech Community</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <style>
+    /* ============ Design tokens ============ */
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+    :root{
+      --forest:        #1F3D2B;
+      --forest-dark:   #142A1C;
+      --gold:          #C9A227;
+      --clay:          #A3441F;
+      --cream:         #F6F1E4;
+      --charcoal:      #231F1B;
+      --sage:          #8AA48F;
+    }
+
+    html{ scroll-behavior:smooth; scroll-padding-top:74px; }
+
+    body{
+      font-family:'Inter', sans-serif;
+      color:var(--charcoal);
+      background:var(--cream);
+    }
+
+    h1,h2,h3,h4,h5, .font-display{
+      font-family:'Fraunces', serif;
+    }
+
+    /* Tibeb-inspired woven border band — the page's signature motif,
+       echoing the triangular border weaving found on Ethiopian tibeb cloth */
+    .tibeb-band{
+      height:10px;
+      background:repeating-linear-gradient(
+        135deg,
+        var(--gold) 0 10px,
+        var(--clay) 10px 20px,
+        var(--forest) 20px 30px
+      );
+    }
+
+    /* ============ Navbar ============ */
+    .navbar-ethio{
+      background:var(--forest-dark);
+      box-shadow:0 2px 14px rgba(0,0,0,.25);
+    }
+    .navbar-ethio .navbar-brand{
+      font-family:'Fraunces', serif;
+      font-weight:700;
+      letter-spacing:.02em;
+      color:var(--cream);
+    }
+    .navbar-ethio .nav-link{
+      color:rgba(246,241,228,.8);
+      transition:color .2s ease;
+    }
+    .navbar-ethio .nav-link:hover,
+    .navbar-ethio .nav-link.active{
+      color:var(--gold);
+    }
+    .btn-gold{
+      background:var(--gold);
+      border:none;
+      color:var(--forest-dark);
+      font-weight:600;
+      transition:transform .15s ease, filter .15s ease;
+    }
+    .btn-gold:hover{
+      filter:brightness(1.08);
+      transform:translateY(-1px);
+      color:white;
+    }
+    .btn-outline-cream{
+      border:1px solid rgba(246,241,228,.7);
+      color:var(--cream);
+      transition:transform .15s ease, background .15s ease;
+    }
+    .btn-outline-cream:hover{
+      background:rgba(246,241,228,.12);
+      color:var(--cream);
+      transform:translateY(-1px);
+    }
+
+    /* ============ Hero ============ */
+    .hero{
+      background:radial-gradient(circle at 20% 15%, #2A4E37 0%, var(--forest) 45%, var(--forest-dark) 100%);
+      padding:110px 0 90px;
+      color:var(--cream);
+    }
+    .hero .eyebrow{
+      letter-spacing:.18em;
+      font-size:.75rem;
+      font-weight:600;
+      color:var(--gold);
+    }
+    .hero h1{
+      font-weight:700;
+      text-shadow:0 2px 18px rgba(0,0,0,.35);
+    }
+    .hero .lead{
+      color:rgba(246,241,228,.78);
+      max-width:640px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .hero .stat-number{
+      font-family:'Fraunces', serif;
+      font-weight:600;
+      font-size:1.75rem;
+      color:var(--gold);
+    }
+    .hero .stat-label{
+      color:rgba(246,241,228,.65);
+      font-size:.85rem;
+    }
+
+    /* ============ Features ============ */
+    .section-features{ background:var(--cream); }
+    .feature-icon{ font-size:2rem; }
+    .feature-card{
+      transition:transform .2s ease, box-shadow .2s ease;
+      border:1px solid rgba(31,61,43,.08);
+    }
+    .feature-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 1rem 2rem rgba(31,61,43,.15) !important;
+    }
+
+    /* ============ Stats bar ============ */
+    .stats-bar{
+      background:var(--forest-dark);
+      color:var(--cream);
+    }
+    .stats-bar .stat-figure{
+      font-family:'Fraunces', serif;
+      font-weight:700;
+    }
+    .stats-bar .stat-caption{
+      color:rgba(246,241,228,.6);
+      font-size:.8rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .stats-bar .col-6{ border-color:rgba(246,241,228,.15) !important; }
+    .stats-bar .col-6:last-child{ border-right:none !important; }
+
+    /* ============ Team ============ */
+    .team-avatar{
+      width:96px; height:96px; object-fit:cover;
+      transition:transform .25s ease;
+      border:3px solid var(--gold);
+    }
+    .team-card:hover .team-avatar{ transform:scale(1.07); }
+    .social-pill{
+      width:34px; height:34px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius:50%;
+      background:var(--cream);
+      color:var(--forest);
+      font-size:.9rem;
+      transition:background .2s ease, color .2s ease;
+    }
+    .social-pill:hover{ background:var(--forest); color:var(--cream); }
+
+    /* ============ Pricing ============ */
+    .section-pricing{ background:#EFE8D6; }
+    .pricing-card{
+      transition:transform .25s ease, box-shadow .25s ease;
+      border:1px solid rgba(31,61,43,.1);
+    }
+    .pricing-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 1rem 2rem rgba(31,61,43,.12);
+    }
+    .pricing-card.pro{
+      background:var(--forest-dark);
+      color:var(--cream);
+      transform:scale(1.05);
+      border:none;
+      box-shadow:0 1.25rem 2.5rem rgba(20,42,28,.35);
+    }
+    .pricing-card.pro:hover{ transform:scale(1.07) translateY(-4px); }
+    .pricing-card.pro .list-group-item{
+      background:transparent;
+      color:rgba(246,241,228,.85);
+      border-color:rgba(246,241,228,.15);
+    }
+    .badge-popular{
+      background:var(--gold);
+      color:var(--forest-dark);
+      font-weight:600;
+    }
+
+    /* ============ FAQ ============ */
+    .section-faq{ background:var(--cream); }
+    .accordion-button:not(.collapsed){
+      background:rgba(201,162,39,.12);
+      color:var(--forest-dark);
+    }
+    .accordion-button:focus{ box-shadow:0 0 0 .2rem rgba(201,162,39,.35); }
+
+    /* ============ Contact ============ */
+    .section-contact{ background:#EFE8D6; }
+    .form-control:focus, .form-select:focus{
+      border-color:var(--forest);
+      box-shadow:0 0 0 .2rem rgba(31,61,43,.15);
+    }
+
+    /* ============ Footer ============ */
+    footer{ background:var(--forest-dark); color:rgba(246,241,228,.85); }
+    footer a{ color:rgba(246,241,228,.75); text-decoration:none; transition:color .2s ease; }
+    footer a:hover{ color:var(--gold); }
+
+    /* Override Bootstrap's default primary blue used elsewhere */
+    .btn-success{ background:var(--forest); border-color:var(--forest); }
+    .btn-success:hover{ background:var(--forest-dark); border-color:var(--forest-dark); }
+    .btn-outline-success{ color:var(--forest); border-color:var(--forest); }
+    .btn-outline-success:hover{ background:var(--forest); border-color:var(--forest); }
+
+    /* ============ Dark Mode Toggle Button ============ */
+    #darkModeToggle{
+      border:1px solid rgba(246,241,228,.5);
+      color:var(--cream);
+      background:transparent;
+      font-size:.8rem;
+      padding:.25rem .65rem;
+      border-radius:20px;
+      transition:background .2s ease, color .2s ease, border-color .2s ease;
+      white-space:nowrap;
+    }
+    #darkModeToggle:hover{
+      background:rgba(246,241,228,.15);
+    }
+
+    /* ============ Dark Mode ============ */
+    body.dark-mode{
+      background:#0f1117;
+      color:#ddd8cc;
+    }
+    body.dark-mode .section-features,
+    body.dark-mode .section-faq{
+      background:#161b24;
+    }
+    body.dark-mode .section-pricing{
+      background:#0d1520;
+    }
+    body.dark-mode .section-contact{
+      background:#161b24;
+    }
+    /* Cards */
+    body.dark-mode .card:not(.pricing-card.pro){
+      background:#1e2433;
+      border-color:rgba(255,255,255,.08);
+      color:#ddd8cc;
+    }
+    body.dark-mode .text-muted{
+      color:rgba(221,216,204,.6) !important;
+    }
+    body.dark-mode .card .card-text{
+      color:rgba(221,216,204,.6) !important;
+    }
+    
+    /* List group inside cards */
+    body.dark-mode .list-group-item{
+      background:transparent;
+      color:#ddd8cc;
+      border-color:rgba(255,255,255,.1);
+    }
+    /* Team section */
+    body.dark-mode section.py-5.bg-white{
+      background:#161b24 !important;
+    }
+    body.dark-mode .social-pill{
+      background:#2a3040;
+      color:var(--cream);
+    }
+    body.dark-mode .social-pill:hover{
+      background:var(--forest);
+    }
+    /* Accordion */
+    body.dark-mode .accordion-item{
+      background:#1e2433;
+      border-color:rgba(255,255,255,.1);
+    }
+    body.dark-mode .accordion-button{
+      background:#1e2433;
+      color:#ddd8cc;
+    }
+    body.dark-mode .accordion-button::after{
+      filter:invert(1);
+    }
+    body.dark-mode .accordion-button:not(.collapsed){
+      background:rgba(201,162,39,.18);
+      color:var(--cream);
+    }
+    body.dark-mode .accordion-body{
+      background:#1e2433;
+      color:#ddd8cc;
+    }
+    /* Form */
+    body.dark-mode .form-control,
+    body.dark-mode .form-select{
+      background:#1e2433;
+      color:#ddd8cc;
+      border-color:rgba(255,255,255,.15);
+    }
+    body.dark-mode .form-control::placeholder{
+      color:rgba(221,216,204,.4);
+    }
+    body.dark-mode .form-control:focus,
+    body.dark-mode .form-select:focus{
+      background:#252c3d;
+      color:#ddd8cc;
+      border-color:var(--gold);
+      box-shadow:0 0 0 .2rem rgba(201,162,39,.25);
+    }
+    body.dark-mode .alert-info{
+      background:rgba(13,202,240,.1);
+      color:#aee9f7;
+      border-color:rgba(13,202,240,.25);
+    }
+    body.dark-mode .alert-info .alert-link{
+      color:var(--gold);
+    }
+    /* Stats bar already dark — keep as-is */
+    /* Hero already dark — keep as-is */
+    /* Footer already dark — keep as-is */
+    /* Navbar in dark mode */
+    body.dark-mode .navbar-ethio{
+      background:#070b10;
+    }
+    /* Tibeb band stays colorful — keep as-is */
+    body.dark-mode footer{
+      background:#070b10;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <!-- ======================= NAVBAR (Step 02) ======================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-ethio sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">EthioConnect 🇪🇹</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-gold ms-auto">Join the Network</a>
+        <button id="darkModeToggle" class="ms-2" aria-label="Toggle dark mode">🌙 Dark</button>
+      </div>
+    </div>
+  </nav>
+  <div class="tibeb-band"></div>
+
+  <!-- ======================= HERO (Step 03) ======================= -->
+  <section id="home" class="hero text-center">
+    <div class="container">
+      <p class="eyebrow text-uppercase mb-3">Ethiopia's #1 Tech Network</p>
+      <h1 class="display-3 mb-4">Connecting Minds Across Ethiopia</h1>
+      <p class="lead mb-4">
+        EthioConnect brings developers, designers, and founders together — to trade ideas,
+        find work, and build the country's tech future side by side.
+      </p>
+      <div class="d-grid d-md-flex gap-3 justify-content-md-center mb-5">
+        <a href="#contact" class="btn btn-gold btn-lg px-4">Get Started Free</a>
+        <a href="#features" class="btn btn-outline-cream btn-lg px-4">Watch Demo</a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-2">
+          <div class="stat-number">2,400+</div>
+          <div class="stat-label">Members</div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Companies</div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Events</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FEATURES (Step 04) ======================= -->
+  <section id="features" class="section-features py-5">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-2">Why EthioConnect?</h2>
+      <p class="text-center text-muted mb-5">Everything you need to grow your tech career in Ethiopia, in one place.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🤝</div>
+              <h5 class="card-title fw-bold">Networking</h5>
+              <p class="card-text">Meet engineers, designers, and founders across Addis Ababa and beyond through curated meetups and online groups.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">💼</div>
+              <h5 class="card-title fw-bold">Jobs</h5>
+              <p class="card-text">Browse roles from Ethiopian startups and international companies hiring local talent, updated weekly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🎤</div>
+              <h5 class="card-title fw-bold">Events</h5>
+              <p class="card-text">Attend hackathons, workshops, and conferences designed for Ethiopia's growing developer community.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">📚</div>
+              <h5 class="card-title fw-bold">Learning</h5>
+              <p class="card-text">Access free courses and study groups covering web development, data, and product design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🧭</div>
+              <h5 class="card-title fw-bold">Mentorship</h5>
+              <p class="card-text">Get paired with senior engineers for 1:1 guidance on career growth and technical skills.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card feature-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🌍</div>
+              <h5 class="card-title fw-bold">Open Source</h5>
+              <p class="card-text">Contribute to Ethiopian-built open source projects and grow your public portfolio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= STATS BAR (Step 05) ======================= -->
+  <section class="stats-bar py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6 col-md-3 border-end py-3 py-md-0">
+          <div class="stat-figure display-5">2,400+</div>
+          <div class="stat-caption">Members</div>
+        </div>
+        <div class="col-6 col-md-3 border-end py-3 py-md-0">
+          <div class="stat-figure display-5">120+</div>
+          <div class="stat-caption">Companies</div>
+        </div>
+        <div class="col-6 col-md-3 border-end py-3 py-md-0">
+          <div class="stat-figure display-5">14</div>
+          <div class="stat-caption">Cities Covered</div>
+        </div>
+        <div class="col-6 col-md-3 py-3 py-md-0">
+          <div class="stat-figure display-5">50+</div>
+          <div class="stat-caption">Events Hosted</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TEAM (Step 06) ======================= -->
+  <section id="team" class="py-5 bg-white">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-2">Meet the Team</h2>
+      <p class="text-center text-muted mb-5">The people building EthioConnect, every day.</p>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card team-card border-0 text-center h-100">
+            <div class="card-body p-4">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIi1ddAdoiV8UnVNG47XlFqwxUVJiL06e5fEbb2lnlYA&s=10" class="rounded-circle team-avatar mb-3" alt="Meron Tadesse">
+              <h5 class="card-title mb-0">Meron Tadesse</h5>
+              <p class="text-muted small mb-2">UI/UX Lead</p>
+              <p class="small mb-3">Designs interfaces that feel unmistakably Ethiopian.</p>
+              <a href="#" class="social-pill me-1" aria-label="Meron's GitHub">gh</a>
+              <a href="#" class="social-pill me-1" aria-label="Meron's LinkedIn">in</a>
+              <a href="#" class="social-pill" aria-label="Meron's Twitter">tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card team-card border-0 text-center h-100">
+            <div class="card-body p-4">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhiGWytPlP4-RsrUfaYTh4G8zDK9wlU0T9WrKR1H5Kww&s=10" class="rounded-circle team-avatar mb-3" alt="Dawit Bekele">
+              <h5 class="card-title mb-0">Dawit Bekele</h5>
+              <p class="text-muted small mb-2">Senior Engineer</p>
+              <p class="small mb-3">Leads the platform team and mentors new contributors.</p>
+              <a href="#" class="social-pill me-1" aria-label="Dawit's GitHub">gh</a>
+              <a href="#" class="social-pill me-1" aria-label="Dawit's LinkedIn">in</a>
+              <a href="#" class="social-pill" aria-label="Dawit's Twitter">tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card team-card border-0 text-center h-100">
+            <div class="card-body p-4">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcPjPjvr7bb2TQfUFQRbxfB2swaozFB0GoB8yjCLbJLQ&s=10" class="rounded-circle team-avatar mb-3" alt="Hirut Alemu">
+              <h5 class="card-title mb-0">Hirut Alemu</h5>
+              <p class="text-muted small mb-2">AI Researcher</p>
+              <p class="small mb-3">Builds the recommendation engine behind our job matches.</p>
+              <a href="#" class="social-pill me-1" aria-label="Hirut's GitHub">gh</a>
+              <a href="#" class="social-pill me-1" aria-label="Hirut's LinkedIn">in</a>
+              <a href="#" class="social-pill" aria-label="Hirut's Twitter">tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card team-card border-0 text-center h-100">
+            <div class="card-body p-4">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvCY7JiJYAfQwuoIQaqf9PLL0J3nyW0_aCOtOH4PSO5g&s=10" class="rounded-circle team-avatar mb-3" alt="Biruk Girma">
+              <h5 class="card-title mb-0">Biruk Girma</h5>
+              <p class="text-muted small mb-2">Community Manager</p>
+              <p class="small mb-3">Runs our meetups and keeps the community welcoming.</p>
+              <a href="#" class="social-pill me-1" aria-label="Biruk's GitHub">gh</a>
+              <a href="#" class="social-pill me-1" aria-label="Biruk's LinkedIn">in</a>
+              <a href="#" class="social-pill" aria-label="Biruk's Twitter">tw</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PRICING ======================= -->
+  <section id="pricing" class="section-pricing py-5">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-3">Simple, Transparent Pricing</h2>
+      <div class="d-flex justify-content-center mb-5">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="billingToggle" aria-describedby="billingToggleLabel">
+          <label class="form-check-label" id="billingToggleLabel" for="billingToggle">Monthly&nbsp;/&nbsp;Yearly</label>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-12 col-lg-4">
+          <div class="card pricing-card h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold">Free</h4>
+              <div class="display-5 fw-bold my-2">0 ETB</div>
+              <p class="text-muted">per month</p>
+              <ul class="list-group list-group-flush mb-4 text-start">
+                <li class="list-group-item">Community access</li>
+                <li class="list-group-item">Monthly newsletter</li>
+                <li class="list-group-item">Basic job alerts</li>
+                <li class="list-group-item">Public events only</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline-success w-100">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card pricing-card pro h-100 shadow position-relative">
+            <span class="badge badge-popular position-absolute top-0 start-50 translate-middle">Most Popular</span>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold">Pro</h4>
+              <div class="display-5 fw-bold my-2">299 ETB</div>
+              <p class="text-white-50">per month</p>
+              <ul class="list-group list-group-flush mb-4 text-start">
+                <li class="list-group-item">Everything in Free</li>
+                <li class="list-group-item">Priority job matching</li>
+                <li class="list-group-item">1:1 mentorship sessions</li>
+                <li class="list-group-item">Members-only events</li>
+              </ul>
+              <a href="#contact" class="btn btn-light w-100 fw-semibold">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card pricing-card h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold">Enterprise</h4>
+              <div class="display-6 fw-bold my-2">Contact Us</div>
+              <p class="text-muted">custom pricing</p>
+              <ul class="list-group list-group-flush mb-4 text-start">
+                <li class="list-group-item">Everything in Pro</li>
+                <li class="list-group-item">Team hiring dashboard</li>
+                <li class="list-group-item">Branded job postings</li>
+                <li class="list-group-item">Dedicated account manager</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline-success w-100">Talk to Sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ (Step 07) ======================= -->
+  <section id="faq" class="section-faq py-5">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  How do I join EthioConnect?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Create a free account using the "Join the Network" button, verify your email, and fill in your profile — you're in.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  Is EthioConnect free to use?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. The Free plan covers community access, job alerts, and public events. Pro and Enterprise add mentorship and hiring tools.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  What cities are covered?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We currently have active chapters in Addis Ababa, Bahir Dar, Hawassa, Mekelle, Adama, and Dire Dawa, with more launching soon.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  How do I post a job?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Companies on the Pro or Enterprise plan can post directly from their dashboard. Free members can request a post through our contact form.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                  Can I attend events without a paid plan?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes — all public meetups and workshops are open to Free members. Pro members get early access and members-only sessions.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT (Step 08) ======================= -->
+  <section id="contact" class="section-contact py-5">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold mb-5">Get In Touch</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="alert alert-info">Already have an account? <a href="#" class="alert-link">Sign in here</a>.</div>
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fullName" class="form-label fw-semibold">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="e.g. Selam Getachew" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="citySelect" class="form-label fw-semibold">City</label>
+                <select class="form-select" id="citySelect" required>
+                  <option value="">Select your city...</option>
+                  <option>Addis Ababa</option>
+                  <option>Bahir Dar</option>
+                  <option>Hawassa</option>
+                  <option>Mekelle</option>
+                  <option>Adama</option>
+                  <option>Dire Dawa</option>
+                  <option>Jimma</option>
+                  <option>Gondar</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="subjectSelect" class="form-label fw-semibold">Subject</label>
+                <select class="form-select" id="subjectSelect" required>
+                  <option value="">Select a subject...</option>
+                  <option>Join the Network</option>
+                  <option>Report an Issue</option>
+                  <option>Partnership</option>
+                  <option>General</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-semibold">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="How can we help?"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg">Send Message →</button>
+            </div>
+          </form>
+          <p class="text-center text-muted small mt-3">We respond to all messages within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER (Step 09) ======================= -->
+  <div class="tibeb-band"></div>
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <h5 class="font-display text-white mb-2">EthioConnect</h5>
+          <p class="small">The professional network built for Ethiopia's tech community — connecting talent, companies, and ideas.</p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h6 class="text-white mb-3">Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#features">Features</a></li>
+            <li class="mb-2"><a href="#pricing">Pricing</a></li>
+            <li class="mb-2"><a href="#faq">FAQ</a></li>
+            <li class="mb-2"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h6 class="text-white mb-3">Follow Us</h6>
+          <a href="#" class="social-pill me-2" aria-label="EthioConnect on GitHub">gh</a>
+          <a href="#" class="social-pill me-2" aria-label="EthioConnect on LinkedIn">in</a>
+          <a href="#" class="social-pill" aria-label="EthioConnect on Twitter">tw</a>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0">© 2025 EthioConnect. Built with Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======================= BONUS: Dark Mode Toggle ======================= -->
+  <script>
+    (function () {
+      var btn  = document.getElementById('darkModeToggle');
+      var body = document.body;
+
+      /* Apply saved preference immediately (no flash) */
+      if (localStorage.getItem('ethioconnect-dark') === 'on') {
+        body.classList.add('dark-mode');
+        btn.textContent = '\u2600\uFE0F Light';
+      }
+
+      btn.addEventListener('click', function () {
+        var isDark = body.classList.toggle('dark-mode');
+        btn.textContent = isDark ? '\u2600\uFE0F Light' : '\uD83C\uDF19 Dark';
+        localStorage.setItem('ethioconnect-dark', isDark ? 'on' : 'off');
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+/* ==========================================================================
+   EXHAUSTIVE RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Mobile Navigation Toggle Button & Drawer Default
+   -------------------------------------------------------------------------- */
+.mobile-menu-btn {
+  display: none;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Laptop & Small Desktop (992px to 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .hero-grid {
+    gap: 3rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet & Medium Screens (769px to 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-tag {
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+  }
+
+  .hero-bio {
+    margin: 0 auto 2rem auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-avatar-card {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .status-indicator {
+    display: none; /* Hide status badge on tablets to keep navbar clean */
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Landscape & Large Phones (576px to 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Header Controls */
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-bottom: var(--glass-border);
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+    transform: translateY(-150%);
+    transition: transform var(--transition-normal);
+    box-shadow: var(--glass-shadow);
+    z-index: 999;
+  }
+
+  .nav-links.mobile-active {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Section Spacing */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 4rem;
+    min-height: auto;
+  }
+
+  section {
+    padding: 4rem 0 !important;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Projects & Skills Grids */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .portfolio-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  /* Timeline */
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 36px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-dot {
+    left: 1px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  /* Contact & Form */
+  .contact-card-info, .contact-form {
+    padding: 1.5rem;
+  }
+
+  .modal-box {
+    width: 95%;
+    max-height: 88vh;
+    padding: 1.25rem;
+  }
+
+  .modal-header-img {
+    height: 200px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Devices & Portrait Phones (320px to 575px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575px) {
+  .brand-logo {
+    font-size: 1.1rem;
+  }
+
+  .brand-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .hero-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .hero-bio {
+    font-size: 0.98rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .stat-item p {
+    font-size: 0.75rem;
+  }
+
+  .avatar-wrapper {
+    width: 170px;
+    height: 170px;
+    padding: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .floating-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+  }
+
+  /* Skill Category Tabs */
+  .skill-category-tabs {
+    gap: 0.4rem;
+  }
+
+  .tab-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Project Cards */
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .project-actions .btn, .project-actions .project-link-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Toast Container */
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+  }
+
+  .toast {
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+  }
+}

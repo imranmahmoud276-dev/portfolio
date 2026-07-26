@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business License Form</title>
+    <link rel="stylesheet" href="licence.css">
+</head>
+<body>
+
+    <form class="permit-form">
+
+        <header class="doc-top">
+            <aside class="emblem-left">
+                <figure class="emblem-frame">
+                    <img src="images/AA-mayor-logo.jfif" alt="Logo">
+                </figure>
+            </aside>
+            <h3>
+                 አዲስ አበባ ከተማ አስተዳደር ንግድ ቢሮ
+                 <span>Addis Ababa City Administration Trade Bureau</span>
+            </h3>
+            <aside class="emblem-right">
+                <figure class="emblem-frame">
+                    <img src="images/AATB.jfif" alt="Logo">
+                </figure>
+            </aside>
+        </header>
+
+        <section class="registrant-panel">
+
+            <aside class="id-photo-block">
+                <figure class="id-photo-frame">
+                    <figcaption>Photo</figcaption>
+                </figure>
+
+                <input type="file" accept=".png, .jpg, .jpeg">
+            </aside>
+
+            <section class="registrant-fields">
+
+                <div class="field-line">
+                    <label>የግብር ከፋይ መለያ ቁ. /TIN</label>
+                    <input type="number">
+                </div>
+
+                <div class="field-line">
+                    <label>
+                        የንግድ ምዝገባ ቂ
+                        <span>Principal Registration No.</span>
+                    </label>
+                    <input type="text">
+                </div>
+
+                <div class="field-line">
+                    <label>
+                        የቀድሞው ንግድ ፈቃድ ቂጥር
+                        <span>Previous License No.</span>
+                    </label>
+                    <input type="text">
+                </div>
+
+                <div class="field-line">
+                    <label>
+                        የንግድ ሥራ ፈቃድ ቂጥር
+                        <span>Business License No.</span>
+                    </label>
+                    <input type="text">
+                </div>
+
+                <div class="field-line">
+                    <label>
+                        ቀድሞ ተሰጠበት ቀን
+                        <span>Date of Issuance</span>
+                    </label>
+                    <input type="date">
+                </div>
+
+                <div class="field-line">
+                    <label>
+                        የተሰጠበት ቀን
+                        <span>Date of Issuance</span>
+                    </label>
+                    <input type="date">
+                </div>
+
+            </section>
+
+        </section>
+
+        <section class="permit-heading">
+            <h3>የንግድ ፈቃድ</h3>
+            <h3>Business License</h3>
+        </section>
+        <section class="permit-subheading">
+            <h4>በንግድ ምዝገባና ፈቃድ አዋጅ ቁጥር 980/2008 <br> መሰረት ተሰጠ</h4>
+            <h4>Issued Under Commercial Registration and Business <br> license proc.No 980/2016</h4>
+        </section>
+
+        <main class="content-body">
+
+            <section class="entity-section">
+                <!-- Owner / Company fields -->
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>1. የባለቤት/ድርጅት ስም</label>
+                        <input type="text" name="owner_am">
+                    </div>
+                
+                    <div class="lang-en">
+                        <label>1. Owner/Company Name</label>
+                        <input type="text" name="owner_en">
+                    </div>
+                </div>
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>2. ዜግነት</label>
+                        <input type="text" name="nationality_am">
+                    </div>
+                    <div class="lang-en">
+                        <label>2. Nationality</label>
+                        <input type="text" name="nationality_en">
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="trade-section">
+                <!-- Field of business -->
+                
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>3. የንግድ ስም</label>
+                        <input type="text" name="trade_am">
+                    </div>
+                    <div class="lang-en">
+                        <label>3. Trade Name</label>
+                        <input type="text" name="business_name_en">
+                    </div>
+                </div>
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>4. ሥራ አስኪያጅ ስም</label>
+                        <input type="text" name="manager_name_am">
+                    </div>
+                    <div class="lang-en">
+                        <label>4. General Manager Name</label>
+                        <input type="text" name="manager_name_en">
+                    </div>
+                </div>
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>5. የንግድ ድርጅቱ አድራሻ</label>
+                        <div class="addr-line">
+                            <div class="addr-col">
+                                <div class="addr-item">
+                                    <label>ክልል</label>
+                                    <input type="text" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ወረዳ</label>
+                                    <input type="number" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ቤት ቁጥር</label>
+                                    <input type="text" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ፋክስ</label>
+                                    <input type="text" name="business_address_am">
+                                </div>  
+                            </div>
+                            <div class="addr-col">
+                                <div class="addr-item">
+                                    <label>ዞን/ክፍለ ከተማ</label>
+                                    <input type="text" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ቀበሌ</label>
+                                    <input type="number" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ስልክ ቁጥር</label>
+                                    <input type="tel" name="business_address_am">
+                                </div>
+                                <div class="addr-item">
+                                    <label>ኢሜይል</label>
+                                    <input type="email" name="business_address_am">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="lang-en">
+                        <label>5. Business Address</label>
+                        <div class="addr-line">
+                            <div class="addr-col">
+                                <div class="addr-item">
+                                    <label>Region</label>
+                                    <input type="text" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>Woreda</label>
+                                    <input type="number" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>House No</label>
+                                    <input type="text" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>Fax</label>
+                                    <input type="text" name="business_address_en">
+                                </div>
+                            </div>
+
+                            <div class="addr-col">
+                                <div class="addr-item">
+                                    <label>Zone/Sub-city</label>
+                                    <input type="text" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>Qebele</label>
+                                    <input type="number" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>Phone Number</label>
+                                    <input type="tel" name="business_address_en">
+                                </div>
+                                <div class="addr-item">
+                                    <label>Email</label>
+                                    <input type="email" name="business_address_en">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-line">
+                    <div class="lang-am">
+                        <p>6. የንግድ ሥራ ዓይነት</p>
+                        <textarea rows="3" cols="30" name="field_of_business_am"></textarea><hr>
+                    </div>
+                    <div class="lang-en">
+                        <p>6. Field of Business</p>
+                        <textarea rows="3" cols="30" name="field_of_business_en"></textarea><hr>
+                    </div>
+                </div>
+
+                <div class="field-line">
+                    <div class="lang-am">
+                        <label>7. ካፒታል በኢት ብር</label>
+                        <input type="number" name="capital_am"> 
+                        <div class="issue-date-block">
+                            <label>ይህ የንግድ ፈቃድ ዛሬ</label>
+                            <input type="date" placeholder="Date">
+                            <label>በ</label>
+                            <input type="text" placeholder="Region">
+                        </div>   
+                    </div>
+                    <div class="lang-en">
+                        <label>7. Capital in ETB</label>
+                        <input type="number" name="capital_en">
+                        <div class="issue-date-block">
+                            <label>This Business license was issued in</label>
+                            <input type="text" placeholder="Region">
+                            <label>this day</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="doc-footer">
+
+            <section class="signatory-panel">
+                <div class="signatory-name">
+                    <label>የኃላፊ ስም/Name of Official</label>
+                    <input type="text">
+                </div>
+                <div class="signatory-sign">
+                    <label>ፊርማ/Signature</label>
+                    <input type="text">
+                </div>
+            </section>
+
+            <section class="disclaimer">
+<pre>
+    ማሳስቢያ   1. ይህ የንግድ ፍቃድ በዓዋጅ ፈቃድ ቁጥር 980/2008 መሠረት እንደ የበጀት ዓመቱ በአዋጅ በተቀመጠው መሰረት መታደስ አለበት። 
+    N.B.           This License Shall be renewed in accordance with Proclamation No. 980/2008 as per the fiscal year.
+
+                      2. ይU የንግድ ፈቃድ የምስክር ወረቀት በዋስትና ወይም በእዳ ሊያዝ አይችልም። 
+                  The holder of this License is forbidden for surety ship or debt.
+</pre>
+            </section>
+
+            <button type="submit">Submit Form</button>
+
+        </footer>
+
+    </form>
+
+</body>
+</html>
