@@ -1,0 +1,593 @@
+﻿<!-- group assignment
+  Imran Mahmoud  (JZ2780)
+  Yonathan Yilma (YV9888) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addis Books</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='addis.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+
+</style>
+</head>
+<body>
+  <header class="site-header py-3 shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="brand d-flex align-items-center gap-3">
+        <div class="logo">
+          <img src="logo.png" alt="Addis Books Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <h1 class="m-0 site-title">Addis Books</h1>
+          <p class="m-0 site-subtitle">Ethiopian Books</p>
+        </div>
+      </div>
+      <nav class="nav-menu d-none d-lg-flex align-items-center gap-4">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">New Books</a>
+        <a class="nav-link" href="#">Authors</a>
+        <a class="nav-link" href="#">Book Submission</a>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#">About Us</a>
+        </div>
+      </nav>
+      <form class="search-form d-none d-lg-block">
+        <input type="search" class="form-control" placeholder="Type to search...">
+      </form>
+    </div>
+  </header>
+  <section class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <p class="hero-eyebrow">FOR LIMITED TIME ONLY</p>
+      <h1 class="hero-title">FEATURED<br>BOOK OF THE<br>MONTH</h1>
+
+      <div class="hero-awards">
+        <div class="award-badge">
+          <img src="best seller.png" alt="Best Seller">
+        </div>
+        <div class="award-badge">
+          <img src="Awards.png" alt="Book Shimmy Awards">
+        </div>
+        <div class="award-badge">
+          <img src="Winner.png" alt="Winner">
+        </div>
+      </div>
+
+      <a href="#" class="hero-btn">SEE DETAIL</a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="hero-book-back">
+        <img src="memels.jpg" alt="መመለስ book cover">
+      </div>
+      <div class="hero-author">
+        <img src="the girl.png" alt="Author photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="featured-section">
+  <div class="featured-inner">
+
+    <!-- Header -->
+    <div class="featured-header">
+      <div class="featured-eyebrow">FEATURED BOOKS</div>
+      <h2 class="featured-title">What Will You Discover?</h2>
+    </div>
+
+    <!-- Category Nav -->
+    <div class="featured-nav">
+      <a href="#" class="feat-nav-link active">All</a>
+      <a href="#" class="feat-nav-link">Autobiography</a>
+      <a href="#" class="feat-nav-link">Business</a>
+      <a href="#" class="feat-nav-link">More ▾</a>
+    </div>
+
+    <hr class="featured-divider">
+
+    <!-- Books Grid -->
+    <div class="books-grid">
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 1.jpg" alt="Karamon">
+        </div>
+        <p class="book-price">$4.99</p>
+        <h4 class="book-name">Karamon Pigeon and Falcon ካራሞን ቀርሞን</h4>
+        <p class="book-author">By Mihret Degif</p>
+      </div>
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 2.jpg" alt="Yewboch Negest">
+        </div>
+        <p class="book-price no-color"> </p>
+        <h4 class="book-name">Yewboch Negest የውቦች ንግዋት by Mihret Degif</h4>
+        <p class="book-author">By Mihret Degif</p>
+      </div>
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 3.jpg" alt="History of a Difficult Child">
+        </div>
+        <p class="book-price">$15.84</p>
+        <h4 class="book-name">The History of a Difficult Child by Mihret Sibhat</h4>
+        <p class="book-author">By Mihret Sibhat</p>
+      </div>
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 4.jpg" alt="Trials of Hope">
+        </div>
+        <p class="book-price">$26.99</p>
+        <h4 class="book-name">Trials of Hope by Dr Yirga Gelaw Woldeyes</h4>
+        <p class="book-author">By Dr. Yirga Gelaw</p>
+      </div>
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 5.jpg" alt="The Lost Spell">
+        </div>
+        <p class="book-price">$22.79</p>
+        <h4 class="book-name">The Lost Spell ካቡር ድንጋይ by Yismake Worku</h4>
+        <p class="book-author">By Yismake Worku</p>
+      </div>
+
+      <div class="book-item">
+        <div class="book-img-wrap">
+          <img src="book 6.jpg" alt="Zamra">
+        </div>
+        <p class="book-price">$25.00</p>
+        <h4 class="book-name">Zamra ዛምራ by Yismake Worku</h4>
+        <p class="book-author">By Yismake Worku</p>
+      </div>
+
+    </div>
+
+    <!-- Dots (non-interactive) -->
+    <div class="featured-dots">
+      <span class="feat-dot active"></span>
+      <span class="feat-dot"></span>
+      <span class="feat-dot"></span>
+    </div>
+
+  </div>
+</section>
+<div class="container">
+
+  <!-- Explore Categories -->
+  <div class="section-header">
+    <div>
+      <div class="eyebrow">Top Categories</div>
+      <h2 class="section-title">Explore Categories</h2>
+    </div>
+    <a href="#" class="view-all">View All &rarr;</a>
+  </div>
+
+  <div class="categories-grid">
+    <div class="category-card">
+      <div class="icon-wrap">&#10024;</div>
+      <div>
+        <div class="category-name">Fiction &amp; Literature</div>
+        <div class="category-count">73 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card center">
+      <div class="icon-wrap">&#128218;</div>
+      <div>
+        <div class="category-name">IT &amp; Technology</div>
+        <div class="category-count">90 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="icon-wrap">&#128118;</div>
+      <div>
+        <div class="category-name">Children's</div>
+        <div class="category-count">15 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="icon-wrap">&#128340;</div>
+      <div>
+        <div class="category-name">Ethiopian History</div>
+        <div class="category-count">30 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="icon-wrap">&#128202;</div>
+      <div>
+        <div class="category-name">Business</div>
+        <div class="category-count">45 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="icon-wrap">&#128176;</div>
+      <div>
+        <div class="category-name">Financial</div>
+        <div class="category-count">17 Books</div>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="icon-wrap">&#127872;</div>
+      <div>
+        <div class="category-name">Self Help</div>
+        <div class="category-count">30 Books</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best of the Month -->
+  <div class="feature-section">
+    <div class="feature-text">
+      <div class="eyebrow">Best of the Month</div>
+      <h2 class="feature-title">Mazarot ማዛሮት</h2>
+      <div class="feature-author">By Megabe Haddis Rodas Tadese</div>
+      <p class="feature-desc">
+        Dr. Rodas Tadese Abebe has published more than 23 books about the ancient wisdom of Ethiopians
+        and the Ethiopian Orthodox Church. This book focuses on the stars and the creation of God in the universe.
+      </p>
+      <a href="#" class="buy-btn">Buy Now on Amazon</a>
+
+      <div class="book-row">
+        <div class="book-item">
+          <div class="book-cover"><img src="888.jpg" alt="888 book cover"></div>
+          <div class="book-title">888</div>
+          <div class="book-author">By Megabe Haddis Rodas Tadese</div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover"><img src="jember.jpg" alt="Jember book cover"></div>
+          <div class="book-title">Jember: In...</div>
+          <div class="book-author">By Beserat Debebe</div>
+        </div>
+        <div class="book-item">
+          <div class="book-cover"><img src="birhan.jpg" alt="Berhan Filagot book cover"></div>
+          <div class="book-title">የብርሀን ፈላጎት...</div>
+          <div class="book-author">By Alemayehu Gelagay</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-banner">
+      <img src="mazrot.jpg" alt="Mazarot book cover" >
+    </div>
+  </div>
+
+</div>
+
+  <!-- Best Authors -->
+  <section class="best-authors-section">
+    <div class="container">
+      <div class="best-authors-header">
+        <div class="eyebrow">THIS MONTH</div>
+        <h3>Best Authors</h3>
+      </div>
+
+      <div class="authors-grid">
+        <div class="author-card">
+          <div class="author-image">
+            <img src="yismake.jpg" alt="Yismake Worku">
+          </div>
+          <div class="author-name">Yismake Worku</div>
+          <div class="author-books">5 Book</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="zeritu.jpg" alt="Zeritu Kebede">
+          </div>
+          <div class="author-name">Zeritu kebede</div>
+          <div class="author-books">1 Book</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="alemayehu.jpg" alt="Alemayehu Mammo">
+          </div>
+          <div class="author-name">Alemayehu Mammo</div>
+          <div class="author-books">2 Books</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="hailu.jpg" alt="Hailu Worku Obsse">
+          </div>
+          <div class="author-name">Hailu Worku Obsse</div>
+          <div class="author-books">2 Books</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="azarias.jpg" alt="Azaries Dessie">
+          </div>
+          <div class="author-name">Azaries Dessie</div>
+          <div class="author-books">1 Book</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="haymanot.jpg" alt="Haymanot Dilnesaw">
+          </div>
+          <div class="author-name">Haymanot Dilnesaw</div>
+          <div class="author-books">1 Book</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="eyob.jpg" alt="Dr. Eyob Mamo">
+          </div>
+          <div class="author-name">Dr.Eyob Mamo</div>
+          <div class="author-books">0 Book</div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-image">
+            <img src="dagmawi.jpg" alt="Dagmawi Assefa">
+          </div>
+          <div class="author-name">Dagmawi Assefa</div>
+          <div class="author-books">3 Book</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Upcoming Events + Popular Series Section -->
+<section class="events-series-section">
+  
+  <!-- Upcoming Events Banner -->
+  <div class="events-banner">
+    <div class="container d-flex justify-content-between align-items-start">
+      <div>
+        <div class="events-eyebrow">UPCOMING EVENTS</div>
+        <h2 class="events-title">Addis Books Events</h2>
+      </div>
+      <a href="#" class="events-view-all">VIEW ALL →</a>
+    </div>
+  </div>
+
+  <!-- Popular Series -->
+  <div class="popular-series">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="series-eyebrow">TOP CATEGORIES</div>
+        <h2 class="series-title">Popular Series</h2>
+      </div>
+
+      <!-- Slider Wrapper -->
+      <div class="series-slider">
+        <div class="series-track" id="seriesTrack">
+
+          <!-- Slide 1: Art & Design -->
+          <div class="series-card" style="background: #f5f0eb;">
+            <img src="book 1.jpg" alt="Art & Design">
+            <div class="series-info">
+              <h4>Art &amp; Design</h4>
+              <ul>
+                <li>Cinema</li>
+                <li>Photography</li>
+                <li>Graphic Design</li>
+                <li>UI &amp; UX Design</li>
+                <li>Illustration</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 2: Technology -->
+          <div class="series-card" style="background: #eaf2ef;">
+            <img src="book 2.jpg" alt="Technology">
+            <div class="series-info">
+              <h4>Technology</h4>
+              <ul>
+                <li>Java Script</li>
+                <li>Learning Machine</li>
+                <li>GPT Chat</li>
+                <li>Intelligent Artificial</li>
+                <li>Native React</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 3: Business -->
+          <div class="series-card" style="background: #eaf0f5;">
+            <img src="book 3.jpg" alt="Business">
+            <div class="series-info">
+              <h4>Business</h4>
+              <ul>
+                <li>Development</li>
+                <li>Administration</li>
+                <li>Commercial</li>
+                <li>Real Estate</li>
+                <li>Finance</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dots -->
+      <div class="series-dots">
+        <button class="dot active"></button>
+        <button class="dot" ></button>
+        <button class="dot" ></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="buy-book-section">
+  <div class="buy-book-inner">
+
+    <!-- LEFT -->
+    <div class="buy-book-left">
+      <div class="buy-book-eyebrow">AVAILABLE NOW</div>
+      <h2 class="buy-book-title">Buy This Book<br>Now</h2>
+      <p class="buy-book-desc">
+        This group of friends is different. They are different
+        because they are different.<br>
+        They all come from different heritages, have different
+        personalities, and have different hopes and dreams.
+        What they have in common is that they celebrate each
+        other's differences.
+      </p>
+      <div class="buy-book-price">$24.99</div>
+
+      <div class="buy-store-row">
+        <a href="#" class="buy-store-btn">
+          <img src="Download_on_the_App_Store_Badge.svg.png" alt="App Store">
+        </a>
+        <a href="#" class="buy-store-btn">
+          <img src="Google_Play_Store_badge_EN.svg.webp" alt="Google Play">
+        </a>
+        <a href="#" class="buy-store-btn buy-store-amazon">
+          <img src="Amazon_Books_logo.png" alt="Amazon Books">
+        </a>
+      </div>
+
+      <div class="buy-pay-row">
+        <img src="chapa-removebg-preview.png" alt="Chapa" class="pay-logo">
+        <img src="card-removebg-preview.png" alt="Mastercard" class="pay-logo">
+        <img src="VISA-logo.png" alt="Visa" class="pay-logo">
+        <img src="skkkkk-removebg-preview.png" alt="Skrill" class="pay-logo">
+        <img src="pal-removebg-preview.png" alt="PayPal" class="pay-logo">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="buy-book-right">
+      <img src="meron.jpg" alt="Author holding book" class="buy-girl-img">
+      <div class="buy-plant">🪴</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Partners Logo Bar -->
+<section class="partners-section">
+  <div class="partners-inner">
+    <div class="partner-item">
+      <img src="images-removebg-preview.png" alt="BookDiscus">
+      <span>BOOKDISCUS</span>
+    </div>
+    <div class="partner-item">
+      <img src="posts-removebg-preview.png" alt="Higginbotham Book Shop">
+      <span>HIGGINBOTHAM<br>BOOK SHOP</span>
+    </div>
+    <div class="partner-item">
+      <img src="compare_icon-removebg-preview.png" alt="Sharing">
+      <span>SHARING</span>
+    </div>
+    <div class="partner-item">
+      <img src="bookss-removebg-preview.png" alt="Library">
+      <span>LIBRARY</span>
+    </div>
+    <div class="partner-item">
+      <img src="walll-removebg-preview.png" alt="Walrus Books">
+      <span>WALRUS<br>BOOKS</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Bar -->
+<div class="contact-bar">
+  <div class="contact-bar-inner">
+    <div class="contact-bar-item">
+      <div class="contact-bar-label">OUR LOCATION</div>
+      <div class="contact-bar-value">22 Town Square Mall 7th floor Addis Ababa, Ethiopia</div>
+    </div>
+    <div class="contact-bar-item">
+      <div class="contact-bar-label">CALL US</div>
+      <div class="contact-bar-value">+251 090-623-0000</div>
+    </div>
+    <div class="contact-bar-item">
+      <div class="contact-bar-label">E-MAIL US</div>
+      <div class="contact-bar-value">info@addisbooks.com</div>
+    </div>
+    <div class="contact-bar-item">
+      <div class="contact-bar-label">CONNECT US</div>
+      <div class="contact-bar-social">
+        <a href="#"><img src="youtube-removebg-preview.png" alt="YouTube"></a>
+        <a href="#"><img src="twitter-removebg-preview.png" alt="Twitter"></a>
+        <a href="#"><img src="Instagram_logo_2016.svg-removebg-preview.png" alt="Instagram"></a>
+        <a href="#"><img src="Facebook_f_logo__2021_.svg-removebg-preview.png"Facebook"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- About Us -->
+    <div class="footer-col">
+      <div class="footer-eyebrow">ABOUT US</div>
+      <h4 class="footer-heading">ADDIS BOOKS</h4>
+      <p class="footer-desc">
+        A platform for all Ethiopian Books and Authors. Authors
+        join AddisBooks.com now and create your professional
+        profile page. <strong>Ready to expand your readership?</strong>
+      </p>
+      <div class="footer-links-row">
+        <a href="#" class="footer-highlight">👉 Submit Your Book Now</a> |
+        <a href="#" class="footer-highlight">View Author Profiles</a>
+      </div>
+    </div>
+
+    <!-- More on Addis Books -->
+    <div class="footer-col">
+      <h4 class="footer-heading">MORE ON ADDIS BOOKS</h4>
+      <ul class="footer-list">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Book Events</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Frequently Asked Questions</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-col">
+      <h4 class="footer-heading">USEFUL LINKS</h4>
+      <ul class="footer-list">
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">My Favorite List</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-col">
+      <div class="footer-eyebrow">CONTACT US</div>
+      <h4 class="footer-heading">CONTACT US</h4>
+      <div class="footer-contact-info">
+        <p>Email: info@addisbooks.com</p>
+        <p>Phone: +251 090-623-0000</p>
+        <p>Office: 22 Town Square Mall, 7th floor, Addis Ababa, Ethiopia</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
